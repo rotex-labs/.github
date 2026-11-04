@@ -1,0 +1,57 @@
+name: Bug report
+description: Something renders wrong, crashes or does not build.
+labels: ["type:bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report. Please fill in as much as you can.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps or code to reproduce
+      render: rust
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      multiple: true
+      options:
+        - Vulkan
+        - wgpu
+        - D3D12
+        - Other / not backend-specific
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Rotex crate(s) and version
+      placeholder: rotex-core 0.2.0, rotex-vulkan 0.2.0
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Windows 11, Ubuntu 24.04, macOS 15, browser...
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU and driver version
+      placeholder: NVIDIA RTX 4070, driver 560.94
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, validation-layer output or screenshots
+      render: shell

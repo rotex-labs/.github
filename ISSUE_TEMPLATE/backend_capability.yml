@@ -1,0 +1,51 @@
+name: Backend capability
+description: Report or request how a feature is supported on a backend (Native / Emulated / Absent).
+labels: ["type:capability", "needs-triage"]
+body:
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      placeholder: e.g. indirect draw, timeline semaphores, ray tracing
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      options:
+        - Vulkan
+        - wgpu
+        - D3D12
+        - OpenGL / WebGL
+        - Metal
+    validations:
+      required: true
+  - type: dropdown
+    id: current
+    attributes:
+      label: Currently reported as
+      options:
+        - Native
+        - Emulated
+        - Absent
+        - Not reported / unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: expected
+    attributes:
+      label: Should be
+      options:
+        - Native
+        - Emulated
+        - Absent
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: API or extension names, spec links, driver or hardware details.
+    validations:
+      required: true

@@ -1,0 +1,23 @@
+# Shared label set for rotex-labs repositories.
+- {name: "type:bug", color: "d73a4a", description: "Something is broken"}
+- {name: "type:feature", color: "FFA81F", description: "New API feature or slice"}
+- {name: "type:capability", color: "3FD0F2", description: "Native / Emulated / Absent support on a backend"}
+- {name: "type:docs", color: "0075ca", description: "Documentation"}
+- {name: "type:refactor", color: "c5def5", description: "Internal change, no behaviour change"}
+- {name: "question", color: "d876e3", description: "Further information is requested"}
+- {name: "needs-triage", color: "ededed", description: "Not reviewed yet"}
+- {name: "good first issue", color: "7057ff", description: "Good for newcomers"}
+- {name: "help wanted", color: "008672", description: "Extra attention is needed"}
+- {name: "breaking", color: "b60205", description: "Breaking API change"}
+- {name: "backend:vulkan", color: "A41E22", description: "Vulkan backend"}
+- {name: "backend:wgpu", color: "5a3fd0", description: "wgpu backend"}
+- {name: "backend:d3d12", color: "107C10", description: "Direct3D 12 backend"}
+- {name: "backend:gl", color: "5586A4", description: "OpenGL / WebGL backend (planned)"}
+- {name: "backend:metal", color: "8e8e93", description: "Metal (planned)"}
+- {name: "slice:core", color: "0B0F1C", description: "Core slice, same on every backend"}
+- {name: "slice:raytracing", color: "fbca04", description: "Ray tracing extension slice"}
+- {name: "slice:mesh-shaders", color: "fbca04", description: "Mesh shader extension slice"}
+- {name: "slice:bindless", color: "fbca04", description: "Bindless extension slice"}
+- {name: "area:graph", color: "bfd4f2", description: "Render graph"}
+- {name: "area:shaders", color: "bfd4f2", description: "Shader core and cooker"}
+- {name: "area:platform", color: "bfd4f2", description: "Window and winit integration"}

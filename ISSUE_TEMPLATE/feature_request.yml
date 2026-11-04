@@ -1,0 +1,40 @@
+name: Feature request
+description: Propose a new API feature or capability slice.
+labels: ["type:feature", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API
+      description: Types, traits or commands you have in mind.
+      render: rust
+  - type: dropdown
+    id: slice
+    attributes:
+      label: Slice kind
+      options:
+        - Core (must behave the same on every backend)
+        - Extension (opt-in via Supports<Feature>)
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: backends
+    attributes:
+      label: Backends that should support it
+      options:
+        - label: Vulkan
+        - label: wgpu
+        - label: D3D12
+        - label: OpenGL / WebGL (planned)
+        - label: Metal (planned)
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or emulation ideas

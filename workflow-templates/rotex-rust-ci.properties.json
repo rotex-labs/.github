@@ -1,0 +1,7 @@
+{
+  "name": "Rotex Rust CI",
+  "description": "fmt, clippy, tests on Linux/Windows/macOS and a wasm32 check for Rotex crates.",
+  "iconName": "octicon rocket",
+  "categories": ["Rust"],
+  "filePatterns": ["Cargo.toml$"]
+}

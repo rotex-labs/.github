@@ -4,7 +4,7 @@ Thanks for helping. This guide applies to every repository in `rotex-labs` that 
 
 ## How the code is organised
 
-Rotex is a set of Rust crates. Crates that change together live in one repository. GPU backends stay in their own repositories. Open issues and pull requests on the repository that contains the crate. The old per-crate repositories are archived and point at the repository in this table.
+Rotex is a set of Rust crates. Crates that change together live in one repository. GPU backends stay in their own repositories. Open issues and pull requests on the repository that contains the crate.
 
 | Repository | Crates |
 |---|---|

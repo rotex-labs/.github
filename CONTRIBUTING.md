@@ -4,18 +4,17 @@ Thanks for helping. This guide applies to every repository in `rotex-labs` that 
 
 ## How the code is organised
 
-Rotex is a set of Rust crates. Development happens in a private monorepo (one Cargo workspace) so a change that spans several crates lands as one commit; the public per-crate repositories are published from it. If you are an outside contributor, open issues and pull requests on the public crate repository; maintainers carry accepted changes into the monorepo.
+Rotex is a set of Rust crates. Crates that change together live in one repository. GPU backends stay in their own repositories. Open issues and pull requests on the repository that contains the crate. The old per-crate repositories are archived and point at the repository in this table.
 
-Crates are grouped in layers. Dependencies only point downward.
-
-| Layer | Crates |
+| Repository | Crates |
 |---|---|
-| Utility | `rotex-math`, `rotex-color` |
-| Spine | `rotex-types` (descriptors, formats, capability model), `rotex-core` (`Device`, command encoders, `Supports<Feature>` traits) |
-| Backends | `rotex-vulkan`, `rotex-wgpu`, `rotex-d3d12` *(in progress)*; an OpenGL / WebGL backend is planned |
-| Graph | `rotex-graph` (render graph, barriers from declared pass usage) |
-| Tools | `rotex-shader-core`, `rotex-shader-cooker` (one shader source cooked per backend) |
-| Platform | `rotex-window`, `rotex-winit` |
+| [`rotex-math`](https://github.com/rotex-labs/rotex-math) | `rotex-math`, `rotex-color` |
+| [`rotex-core`](https://github.com/rotex-labs/rotex-core) | `rotex-types`, `rotex-core`, `rotex-conformance`, `rotex-graph`, `rotex-emulation` |
+| [`rotex-shader`](https://github.com/rotex-labs/rotex-shader) | `rotex-shader-core`, `rotex-shader-cooker` |
+| [`rotex-window`](https://github.com/rotex-labs/rotex-window) | `rotex-window`, `rotex-winit` |
+| [`rotex-vulkan`](https://github.com/rotex-labs/rotex-vulkan), [`rotex-wgpu`](https://github.com/rotex-labs/rotex-wgpu), [`rotex-gl`](https://github.com/rotex-labs/rotex-gl), [`rotex-d3d12`](https://github.com/rotex-labs/rotex-d3d12) | one backend each |
+
+Dependencies only point downward. Inside a slice repository, sibling crates depend on each other by path plus version. A dependency that crosses repositories names a published crates.io version.
 
 Rules of thumb:
 - Backend-specific concepts (SPIR-V details, descriptor-set indices, D3D root signatures) stay in the backend crate, never in the spine.
@@ -37,7 +36,7 @@ rustup target add wasm32-unknown-unknown
 cargo check -p rotex-wgpu --target wasm32-unknown-unknown
 ```
 
-In a single crate repository, drop `--workspace`.
+In a slice repository, keep `--workspace`. In a single-crate backend repository, drop it.
 
 ## Conformance tests
 

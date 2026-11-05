@@ -16,17 +16,17 @@
 
 | Crate | Layer | What it does |
 |---|---|---|
-| [`rotex-types`](https://github.com/rotex-labs/rotex-types) | spine | Descriptors, formats, capability model |
-| [`rotex-core`](https://github.com/rotex-labs/rotex-core) | spine | `Device`, command encoders, capability traits |
+| [`rotex-types`](https://github.com/rotex-labs/rotex-core/tree/main/crates/rotex-types) | spine | Descriptors, formats, capability model |
+| [`rotex-core`](https://github.com/rotex-labs/rotex-core/tree/main/crates/rotex-core) | spine | `Device`, command encoders, capability traits |
 | [`rotex-vulkan`](https://github.com/rotex-labs/rotex-vulkan) | backend | Vulkan via `ash` |
 | [`rotex-wgpu`](https://github.com/rotex-labs/rotex-wgpu) | backend | wgpu: WebGPU, Metal and more |
 | [`rotex-d3d12`](https://github.com/rotex-labs/rotex-d3d12) | backend | Direct3D 12 *(in progress)* |
-| `rotex-gl` | backend | OpenGL 4.x / ES 3 / WebGL2 *(planned)* |
-| [`rotex-graph`](https://github.com/rotex-labs/rotex-graph) | graph | Render graph with automatic barriers |
-| [`rotex-shader-core`](https://github.com/rotex-labs/rotex-shader-core) | tools | Shared shader types |
-| [`rotex-shader-cooker`](https://github.com/rotex-labs/rotex-shader-cooker) | tools | One shader source cooked for every backend |
-| [`rotex-window`](https://github.com/rotex-labs/rotex-window) / [`rotex-winit`](https://github.com/rotex-labs/rotex-winit) | platform | Window abstraction and winit integration |
-| [`rotex-math`](https://github.com/rotex-labs/rotex-math) / [`rotex-color`](https://github.com/rotex-labs/rotex-color) | utility | Math and color types |
+| [`rotex-gl`](https://github.com/rotex-labs/rotex-gl) | backend | OpenGL 4.x / ES 3 / WebGL2 *(planned)* |
+| [`rotex-graph`](https://github.com/rotex-labs/rotex-core/tree/main/crates/rotex-graph) | graph | Render graph with automatic barriers |
+| [`rotex-shader-core`](https://github.com/rotex-labs/rotex-shader/tree/main/crates/rotex-shader-core) | tools | Shared shader types |
+| [`rotex-shader-cooker`](https://github.com/rotex-labs/rotex-shader/tree/main/crates/rotex-shader-cooker) | tools | One shader source cooked for every backend |
+| [`rotex-window`](https://github.com/rotex-labs/rotex-window/tree/main/crates/rotex-window) / [`rotex-winit`](https://github.com/rotex-labs/rotex-window/tree/main/crates/rotex-winit) | platform | Window abstraction and winit integration |
+| [`rotex-math`](https://github.com/rotex-labs/rotex-math/tree/main/crates/rotex-math) / [`rotex-color`](https://github.com/rotex-labs/rotex-math/tree/main/crates/rotex-color) | utility | Math and color types |
 
 ### Backend status
 
